@@ -12,7 +12,7 @@ site_name = "The VERY  Beginner's Guide To Django"
 
 nav = [
   { "Introduction" = "index.md" },
-  { "Getting Started" = "00.what-is-django.md" },
+  { "Getting Started" = "installation.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]

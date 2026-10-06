@@ -35,3 +35,12 @@ You will require to have knowledge about some of these topics. It is not a must.
 - **Core web Technologies:**: You can build simple websites using HTML, CSS And JavaScript.
 
 But do not worry if you have never done so, I got you!
+
+## What you will need
+- **Python**: The core language run-time
+
+- **A text editor**: Sublime-Text, VSCode, etc
+
+- **A web browser**: Firefox, Chrome etc
+
+With this set up, let us now set up Django.
