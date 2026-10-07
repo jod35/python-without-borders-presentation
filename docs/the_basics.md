@@ -172,6 +172,22 @@ Let us now add the HTML file. Create a new folder in the `tasks` app called `tem
 
 </figure>
 
+Add the following code to the file
+
+```html title="HTML file"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+```
+
 Stop the server with **CTRL + C** and start it again. Visiting `http://localhost:8000` will now render our HTML page.
 
 <figure markdown="span">
@@ -283,7 +299,7 @@ We have added a `name` variable with a value of "Jonathan" to the template. We c
 
 Let Us edit our `index.html` file 
 
-```py title="adding template variables"
+```html title="adding template variables"
 <!DOCTYPE html>
 <html lang="en">
 <head>
