@@ -13,8 +13,9 @@ site_name = "The VERY  Beginner's Guide To Django"
 nav = [
   { "Introduction" = "index.md" },
   { "Getting Started" = "installation.md" },
-  { "The Basics" = "the_basics.md" },
-
+  { "Views" = "the_basics.md" },
+  { "Templates In detail" = "templates_in_detail.md" },
+  { "Database Models" = "database_models.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]

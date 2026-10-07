@@ -4,7 +4,13 @@
         <loc>https://www.example.com/</loc>
       </url>
       <url>
+        <loc>https://www.example.com/database_models/</loc>
+      </url>
+      <url>
         <loc>https://www.example.com/installation/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/templates_in_detail/</loc>
       </url>
       <url>
         <loc>https://www.example.com/the_basics/</loc>
