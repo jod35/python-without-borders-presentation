@@ -1,0 +1,967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.example.com/the_basics/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.67">
+    
+    
+      
+        <title>The Basics - The VERY  Beginner's Guide To Django</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ae390e2.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.96d1a7e4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="The VERY  Beginner&#x27;s Guide To Django" class="md-header__button md-logo" aria-label="The VERY  Beginner's Guide To Django" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The VERY  Beginner's Guide To Django
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="The VERY  Beginner&#x27;s Guide To Django" class="md-nav__button md-logo" aria-label="The VERY  Beginner's Guide To Django" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    The VERY  Beginner's Guide To Django
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Introduction
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Getting Started
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  The Basics
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  The Basics
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-django-designed" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How is Django designed?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-framework-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Main Framework Components
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-first-django-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creating your first Django application
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-project-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Django Project settings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-an-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Activate an application
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-first-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Create your first view
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-views-to-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mapping Views to URLs
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        More Views
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-render-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The render function
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-django-designed" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How is Django designed?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-framework-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Main Framework Components
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-first-django-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creating your first Django application
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-project-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Django Project settings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-an-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Activate an application
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-first-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Create your first view
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-views-to-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mapping Views to URLs
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        More Views
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-render-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The render function
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="the-basics">The Basics<a class="headerlink" href="#the-basics" title="Permanent link">&para;</a></h1>
+<p>We have created a Django project and now we create an application and get to see Django in action. Let us first understand Django's architecture. How does it work?</p>
+<h2 id="how-is-django-designed">How is Django designed?<a class="headerlink" href="#how-is-django-designed" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Loose coupling :</strong> Different components of the framework can work together without depending on each other. They do not have to know the details of each other.</p>
+</li>
+<li>
+<p><strong>Less Code :</strong> Django makes it easy to build a lot with less code. It uses Pythonic approaches to abstract away all the complex tasks.</p>
+</li>
+<li>
+<p><strong>Do not Repeat Yourself :</strong> All distinct concepts and code should live in one place. Redundancy is bad.</p>
+</li>
+</ul>
+<p>You can read more about this <a href="https://docs.djangoproject.com/en/6.1/misc/design-philosophies/">here</a></p>
+<h2 id="main-framework-components">Main Framework Components<a class="headerlink" href="#main-framework-components" title="Permanent link">&para;</a></h2>
+<p>Django follows the <strong>MVT</strong> (Model View Template) pattern which is similar to <strong>MVC</strong> (Model View Controller) pattern. This pattern splits your application into three main components.</p>
+<ul>
+<li>
+<p><strong>Models (M) :</strong> This defines the structure of your data for your app and provides ways for you to handle such data between your database and your views.</p>
+</li>
+<li>
+<p><strong>Views (V) :</strong> This communicates with the database through the model, and transfers data to the template.</p>
+</li>
+<li>
+<p><strong>Templates (T) :</strong> This is the presentation layer. Django provides a plain-text template system that renders the HTML your browser views.</p>
+</li>
+</ul>
+<p>With this understanding, we can proceed to create our first application and register it onto our project.</p>
+<h2 id="creating-your-first-django-application">Creating your first Django application<a class="headerlink" href="#creating-your-first-django-application" title="Permanent link">&para;</a></h2>
+<p>Your Django app will contain specific functionality. It can be plugged into any other project. Let us create our very first application.</p>
+<p>In your command line (with your activated virtual environment), type the following command</p>
+<p><div class="language-text highlight"><span class="filename">creating a Django App</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python manage.py startapp tasks
+</span></code></pre></div>
+This will create the following folder structure.</p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/9.png"><img alt="Current Project structure with the tasks app" src=".././imgs/9.png" width="350" /></a>
+
+<figcaption>Current Project structure with the tasks app</figcaption>
+</figure>
+<p>The <code>tasks</code> app folder is described here:</p>
+<ul>
+<li>
+<p><code>tasks/</code>: This is the application folder specific to tasks.</p>
+<ul>
+<li>
+<p><code>__init__.py</code>: This file tells Python to treat the <code>tasks</code> folder as a Python package.</p>
+</li>
+<li>
+<p><code>migrations/</code>: This will keep Django migrations. These track changes to your database models.</p>
+</li>
+<li>
+<p><code>models.py</code>: Your database models live here. These are the classes you use to define the structure of your data. We will look at these later.</p>
+</li>
+<li>
+<p><code>views.py</code> : Here, we shall keep the views, functions or classes responsible for handling all requests made to our Django website.</p>
+</li>
+<li>
+<p><code>tests.py</code> : All automated tests for this app will be written in this file.</p>
+</li>
+<li>
+<p><code>apps.py</code> : This is where the main configuration of your app lives.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="django-project-settings">Django Project settings<a class="headerlink" href="#django-project-settings" title="Permanent link">&para;</a></h2>
+<p>Our project folder <strong>mysite</strong> contains a file called <code>settings.py</code> with a lot of default Django settings. Let us explore these.</p>
+<ul>
+<li>
+<p><strong><code>DEBUG</code></strong>: This is a boolean (True or False) that turns the project's debug mode on or off. When <code>True</code>, Django shows detailed error pages; otherwise, they are hidden. It is important to turn this off when the app is in production.</p>
+</li>
+<li>
+<p><strong><code>ALLOWED_HOSTS</code></strong>: This is a list of domains that Django will allow your website to be accessed on. This will only work when your app is in production with <code>DEBUG</code> set to <code>False</code>.</p>
+</li>
+<li>
+<p><strong><code>INSTALLED_APPS</code></strong>: This is a list of applications that will be active for our project. You will edit this as you add apps. Let us review some of the defaults:</p>
+<ul>
+<li><strong>django.contrib.admin</strong>: An administration site.</li>
+<li><strong>django.contrib.auth</strong>: An authentication framework.</li>
+<li><strong>django.contrib.contenttypes</strong>: A framework for handling content types.</li>
+<li><strong>django.contrib.sessions</strong>: A session framework.</li>
+<li><strong>django.contrib.messages</strong>: A messaging framework.</li>
+<li><strong>django.contrib.staticfiles</strong>: A framework for managing static files, such as CSS, JavaScript files, and images.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>MIDDLEWARE</code></strong>: This is the list of middleware to be executed.</p>
+</li>
+<li><strong><code>ROOT_URLCONF</code></strong>: This describes the location of the main URLs module in your project, <code>mysite/urls.py</code> in our case.</li>
+<li><strong><code>DATABASES</code></strong>: This is the dictionary where the database is set up.</li>
+</ul>
+<h2 id="activate-an-application">Activate an application<a class="headerlink" href="#activate-an-application" title="Permanent link">&para;</a></h2>
+<p>For our <code>tasks</code> application to work, we have to add it to our project's <code>INSTALLED_APPS</code> list together with the apps we have looked at above.</p>
+<div class="language-py highlight"><span class="filename">register your app to INSTALLED_APPS</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># inside mysite/settings.py</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="s1">'django.contrib.admin'</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s1">'django.contrib.auth'</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s1">'django.contrib.contenttypes'</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="c1"># ...</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="s1">'tasks.apps.TasksConfig'</span> <span class="c1"># &lt;- add this</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>The <code>TasksConfig</code> is the class found in <code>tasks/apps.py</code> and it is the main application config for the <code>tasks</code> app. By adding it to <code>INSTALLED_APPS</code>, Django will automatically track its changes and create tables for the models we shall create for it.</p>
+<div class="language-py highlight"><span class="filename">The TasksConfig class</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># inside tasks/apps.py</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.apps</span><span class="w"> </span><span class="kn">import</span> <span class="n">AppConfig</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">TasksConfig</span><span class="p">(</span><span class="n">AppConfig</span><span class="p">):</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s1">'tasks'</span>
+</span></code></pre></div>
+<h2 id="create-your-first-view">Create your first view<a class="headerlink" href="#create-your-first-view" title="Permanent link">&para;</a></h2>
+<p>A view is a function or class that receives a request (HTTP request), processes it and returns a response (HTTP response). Django lets us define them in the <code>views.py</code> file of our applications.</p>
+<p><div class="language-py highlight"><span class="filename">creating our first view</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># inside tasks/views.py</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.shortcuts</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">"index.html"</span><span class="p">,</span> <span class="p">{})</span>
+</span></code></pre></div>
+What we have done here is to create a function <code>index</code> that takes in a <code>request</code> object. It then returns a call to the <code>render</code> function. This uses the request to render an HTML file called <code>index.html</code>. We have not created it yet, but we will shortly.</p>
+<h2 id="mapping-views-to-urls">Mapping Views to URLs<a class="headerlink" href="#mapping-views-to-urls" title="Permanent link">&para;</a></h2>
+<p>In order for this to work, we shall have to map this view function onto a URL that users will visit on our website to view the page. Let us begin by creating a file in our app called <code>urls.py</code></p>
+<div class="language-py highlight"><span class="filename">URL patterns for the tasks app</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># inside tasks/urls.py</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">views</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'index'</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>We import a function called <code>path</code> which maps a path to a view. We also provide a <code>name</code> to the path which will be useful later.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For your URL patterns to be considered, they need to be in a <code>urlpatterns</code> list. Make sure the spelling is exact.</p>
+</div>
+<p>We are not yet done. We need to make the project use the URLs we create in our apps. Remember <code>mysite/urls.py</code>? Add this to that file</p>
+<div class="language-py highlight"><span class="filename">register tasks app URLs to the project</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># inside mysite/urls.py</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib</span><span class="w"> </span><span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>  <span class="c1"># include allows us to import URLs from our apps</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">'tasks.urls'</span><span class="p">)),</span> <span class="c1"># &lt;- add task URLs here</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>Open your browser and navigate to <code>http://localhost:8000</code>. You will see the following.</p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/10.png"><img alt="No template found" src=".././imgs/10.png" width="350" /></a>
+
+<figcaption>No template found</figcaption>
+</figure>
+<p>Let us now add the HTML file. Create a new folder in the <code>tasks</code> app called <code>templates</code> and create a file called <code>index.html</code>.</p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/11.png"><img alt="Current Project structure" src=".././imgs/11.png" width="350" /></a>
+
+<figcaption>Current Project structure</figcaption>
+</figure>
+<p>Stop the server with <strong>CTRL + C</strong> and start it again. Visiting <code>http://localhost:8000</code> will now render our HTML page.</p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/12.png"><img alt="Hello World" src=".././imgs/12.png" width="350" /></a>
+
+<figcaption>Hello WORLD</figcaption>
+</figure>
+<h2 id="more-views">More Views<a class="headerlink" href="#more-views" title="Permanent link">&para;</a></h2>
+<p>Views can return more than just HTML pages.</p>
+<div class="language-py highlight"><span class="filename">More responses</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># inside tasks/views.py</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.shortcuts</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpResponse</span><span class="p">,</span> <span class="n">JsonResponse</span><span class="p">,</span> <span class="n">FileResponse</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Create your views here.</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">"index.html"</span><span class="p">,</span> <span class="p">{})</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_text</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="sd">"""returns some text"""</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">"This is some text"</span><span class="p">)</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_json</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="sd">"""returns some JSON"""</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">"message"</span><span class="p">:</span> <span class="s2">"This is some JSON"</span><span class="p">,</span> <span class="s2">"names"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Jonathan"</span><span class="p">,</span> <span class="s2">"Ssali"</span><span class="p">]}</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="p">)</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="k">def</span><span class="w"> </span><span class="nf">download_file</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="sd">"""returns manage.py"""</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"manage.py"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="k">return</span> <span class="n">FileResponse</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">as_attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">"manage.py"</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Let us map these onto URLs and check them out in the browser.</p>
+<div class="language-py highlight"><span class="filename">URLs for the other views</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># inside tasks/urls.py</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">views</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'index'</span><span class="p">),</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'json/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">get_json</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'get_json'</span><span class="p">),</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'text/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">get_text</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'get_text'</span><span class="p">),</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'file/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">download_file</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'download_file'</span><span class="p">),</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>Let us start with the text view:</p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/13.png"><img alt="Making the text request" src=".././imgs/13.png" width="350" /></a>
+
+<figcaption>Making the text request</figcaption>
+</figure>
+<p>The JSON request works like this:</p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/14.png"><img alt="Making a JSON request" src=".././imgs/14.png" width="350" /></a>
+
+<figcaption>Making a JSON request</figcaption>
+</figure>
+<p>It is common to render HTML but I thought I would first show you the different responses you can return.</p>
+<h2 id="the-render-function">The render function<a class="headerlink" href="#the-render-function" title="Permanent link">&para;</a></h2>
+<p>We used the <code>render</code> function to display an HTML page when users visit the root of our website. Let us look at it in more detail. </p>
+<div class="language-py highlight"><span class="filename">the render function</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># inside tasks/views.py</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.shortcuts</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">"index.html"</span><span class="p">,</span> <span class="p">{})</span>
+</span></code></pre></div>
+<p>The function takes in 3 main arguments. </p>
+<ul>
+<li><code>request</code>:  This is the request object coming from your view function.</li>
+<li><code>template_name</code>: This is the name of the HTML file you want to render.</li>
+<li><code>context</code>: This is a dictionary with values we want to display in the template.</li>
+</ul>
+<p>Let us make use of the <code>context</code> dictionary to transform our HTML file into a template.</p>
+<div class="language-py highlight"><span class="filename">adding template context</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># inside tasks/views.py</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">"index.html"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Jonathan"</span><span class="p">})</span>
+</span></code></pre></div>
+<p>We have added a <code>name</code> variable with a value of "Jonathan" to the template. We can use Django's templating system to dynamically display this variable in the template.</p>
+<p>Let Us edit our <code>index.html</code> file </p>
+<div class="language-py highlight"><span class="filename">adding template variables</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&lt;</span><span class="err">!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&lt;</span><span class="n">html</span> <span class="n">lang</span><span class="o">=</span><span class="s2">"en"</span><span class="o">&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">"UTF-8"</span><span class="o">&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"viewport"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"width=device-width, initial-scale=1.0"</span><span class="o">&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Document</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Hello</span> <span class="p">{{</span><span class="n">name</span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</span></code></pre></div>
+<p>Checking this out in our browser will look like this.  </p>
+<figure>
+
+<a class="glightbox" data-type="image" href=".././imgs/15.png"><img alt="Displaying a dynamic value in a template" src=".././imgs/15.png" width="350" /></a>
+
+<figcaption>Displaying a dynamic value in a template</figcaption>
+</figure>
+<p>Let us end this chapter here. Next, we shall look at templates in detail.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.67a597eb.min.js"></script>
+      
+    
+  </body>
+</html>

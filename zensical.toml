@@ -13,6 +13,8 @@ site_name = "The VERY  Beginner's Guide To Django"
 nav = [
   { "Introduction" = "index.md" },
   { "Getting Started" = "installation.md" },
+  { "The Basics" = "the_basics.md" },
+
 ]
 
 # extra_css = ["stylesheets/extra.css"]
@@ -116,3 +118,6 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
+
+[project.markdown_extensions.zensical.extensions.glightbox]
+zoomable = true
