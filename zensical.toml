@@ -16,6 +16,19 @@ nav = [
   { "Views" = "the_basics.md" },
   { "Templates In detail" = "templates_in_detail.md" },
   { "Database Models" = "database_models.md" },
+  { "ORM and Manager Methods" = "orm_manager_methods.md" },
+  { "Admin" = "admin.md" },
+  { "Queries in Views" = "queries_in_views.md" },
+  { "Layouts and Styling" = "layouts_styling.md" },
+  { "HTML Forms" = "html_forms.md" },
+  { "ModelForms CRUD" = "modelforms_crud.md" },
+  { "Authentication" = "auth.md" },
+  { "Integration Review" = "integration_review.md" },
+  { "Assessments" = "assessments.md" },
+  { "Commands" = "reference_commands.md" },
+  { "Common Errors" = "reference_errors.md" },
+  { "Glossary" = "reference_glossary.md" },
+  { "Checklist" = "reference_checklist.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]

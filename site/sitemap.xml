@@ -4,10 +4,49 @@
         <loc>https://www.example.com/</loc>
       </url>
       <url>
+        <loc>https://www.example.com/admin/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/assessments/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/auth/</loc>
+      </url>
+      <url>
         <loc>https://www.example.com/database_models/</loc>
       </url>
       <url>
+        <loc>https://www.example.com/html_forms/</loc>
+      </url>
+      <url>
         <loc>https://www.example.com/installation/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/integration_review/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/layouts_styling/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/modelforms_crud/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/orm_manager_methods/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/queries_in_views/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/reference_checklist/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/reference_commands/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/reference_errors/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/reference_glossary/</loc>
       </url>
       <url>
         <loc>https://www.example.com/templates_in_detail/</loc>
