@@ -23,12 +23,6 @@ nav = [
   { "HTML Forms" = "html_forms.md" },
   { "ModelForms CRUD" = "modelforms_crud.md" },
   { "Authentication" = "auth.md" },
-  { "Integration Review" = "integration_review.md" },
-  { "Assessments" = "assessments.md" },
-  { "Commands" = "reference_commands.md" },
-  { "Common Errors" = "reference_errors.md" },
-  { "Glossary" = "reference_glossary.md" },
-  { "Checklist" = "reference_checklist.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]
