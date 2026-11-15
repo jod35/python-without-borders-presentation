@@ -1,7 +1,3 @@
-Here is a shorter, cleaned-up version of your lesson. I have kept the beginner-friendly tone, improved the explanations, removed repetition, and corrected the English while preserving the important concepts.
-
-Working with Django Models
-
 # Working with Django Models
 
 Things are about to get interesting. Let us look at models, Django's way of working with databases.
@@ -16,7 +12,7 @@ Every Django app has a `models.py` file where you define its database models. In
 
 ### CharField vs TextField
 
-```
+```py title="The task database model with the name and description"
 from django.db import models
 
 
@@ -35,7 +31,7 @@ Our `Task` class inherits from `models.Model`, the base class for Django models.
 
 Tasks can have either a low or high priority. Django's `TextChoices` lets us define these predefined values.
 
-```
+```py title="Task priorities using Django Model text choices"
 class Task(models.Model):
 
     class TaskPriority(models.TextChoices):
@@ -57,7 +53,7 @@ We define `TaskPriority` inside the model and use it to specify the allowed prio
 
 We also need to know whether a task has been completed. A `BooleanField` stores either `True` or `False`.
 
-```
+```py title="The done boolean field"
 done = models.BooleanField(default=False)
 ```
 
@@ -67,7 +63,7 @@ By default, a new task is marked as incomplete.
 
 Django provides `DateTimeField` for storing dates and times. We can use it to track when a task was created and last updated.
 
-```
+```py
 created_at = models.DateTimeField(auto_now_add=True)
 updated_at = models.DateTimeField(auto_now=True)
 ```
@@ -80,7 +76,7 @@ updated_at = models.DateTimeField(auto_now=True)
 
 Putting everything together, our `tasks/models.py` should look like this:
 
-```
+```py
 from django.db import models
 
 
@@ -108,7 +104,7 @@ Creating a model does not automatically create its table in the database. We nee
 
 Django's default database configuration is in `mysite/settings.py`. By default, Django uses SQLite and stores the database in a file called `db.sqlite3`.
 
-```
+```py title=""
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -121,7 +117,7 @@ DATABASES = {
 
 When you create a Django project, it comes with built-in apps such as authentication, the admin interface, and sessions. Run the following command to apply their initial migrations:
 
-```
+```sh
 python manage.py migrate
 ```
 
@@ -133,7 +129,7 @@ A migration is a file that describes a change to your database structure, such a
 
 Now let us create a migration for the `Task` model we defined.
 
-```
+```sh
 python manage.py makemigrations
 ```
 
@@ -141,7 +137,7 @@ Django detects the changes to your models and creates a migration file in `tasks
 
 **Important:** `makemigrations` creates the migration file, but it does not apply the changes to the database. To create the table, run:
 
-```
+```sh
 python manage.py migrate
 ```
 
