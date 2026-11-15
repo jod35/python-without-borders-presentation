@@ -1139,10 +1139,6 @@
 
 
 <h1 id="queries-in-views">Queries in Views<a class="headerlink" href="#queries-in-views" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Trainer snapshot</p>
-<p>Duration: 90 min. Prerequisites: Ch1–Ch2, rows exist. Files: <code>tasks/tasks/views.py</code>, <code>tasks/tasks/urls.py</code>, <code>tasks/templates/index.html</code>, <code>tasks/templates/detail.html</code>. Prepare: two tasks in DB, one bad pk to demo 404. Start: dummy-list <code>index</code>. End: ORM list + detail with 404 and empty state.</p>
-</div>
 <h2 id="what-we-are-learning">What we are learning<a class="headerlink" href="#what-we-are-learning" title="Permanent link">&para;</a></h2>
 <ol>
 <li>How a URL pattern connects to a view.</li>
@@ -1250,16 +1246,6 @@
 <p>Pattern runs view, view queries and passes context, template loops and links. Missing row gives 404, empty table gives the empty message.</p>
 <h2 id="next-lesson">Next lesson<a class="headerlink" href="#next-lesson" title="Permanent link">&para;</a></h2>
 <p>We share page structure and styling with a base template and static CSS.</p>
-<div class="admonition note">
-<p class="admonition-title">Trainer guide</p>
-<p>Timed plan (adds to 90): dummy recap 10, list view 20, URLs 10, templates 20, guided browsing 15, review + exit 15.
-Live-coding order: show dummy list → delete it → write ORM <code>index</code> → reload → add route → 404 demo with bad pk → write templates → empty-state demo (delete rows, reload, re-add). Ask "where does data come from now?" after each reload.
-Core idea: view decides what, template decides how it looks.
-Misconceptions: template queries the DB (view does), 404 is a bug (it is correct for missing rows), route name equals address (name is for reversing).
-Exit ticket: what renders when the table is empty, and which tag produces it?
-Support: keep admin open to prove data vs display bugs. Extension: filter done-only tasks in the view.
-Troubleshooting: NoReverseMatch → names; blank page → context key mismatch; stale dummy fields → model has no <code>due_date</code>.</p>
-</div>
 
 
 

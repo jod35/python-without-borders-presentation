@@ -1161,10 +1161,6 @@
 
 
 <h1 id="working-with-models-and-manager-methods">Working with Models and Manager Methods<a class="headerlink" href="#working-with-models-and-manager-methods" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Trainer snapshot</p>
-<p>Duration: 90 min. Prerequisites: database models chapter, migrated project. Files: <code>tasks/tasks/models.py</code>, <code>tasks/tasks/migrations/0001_initial.py</code>. Prepare: clean <code>db.sqlite3</code> backup, shell commands copied. Start checkpoint: <code>Task</code> model exists, no <code>0001_initial.py</code>. End checkpoint: migration applied, <code>__str__</code> + ordering added, shell CRUD verified.</p>
-</div>
 <h2 id="what-we-are-learning">What we are learning<a class="headerlink" href="#what-we-are-learning" title="Permanent link">&para;</a></h2>
 <ol>
 <li>The difference between a model class and a model instance.</li>
@@ -1259,16 +1255,6 @@
 <p>Model class is the recipe, instance is one row, manager takes requests, QuerySet is the tray of results. <code>filter</code> is safe for zero-or-many; <code>get</code> demands exactly one.</p>
 <h2 id="next-lesson">Next lesson<a class="headerlink" href="#next-lesson" title="Permanent link">&para;</a></h2>
 <p>We register <code>Task</code> in the admin so we can inspect these same rows in the browser.</p>
-<div class="admonition note">
-<p class="admonition-title">Trainer guide</p>
-<p>Timed plan (adds to 90): recap/checkpoint 15, class-vs-instance 10, live-coding managers 25, get-vs-filter 10, update/delete 10, guided practice 10, review + exit ticket 10.
-Live-coding order: <code>check</code> → <code>makemigrations</code> (show the new file) → <code>migrate</code> → <code>shell</code> → create → all/filter/exclude/order/count → get vs filter + both exceptions → update → delete. Pause after each return value and ask "what type is this: instance, QuerySet, or boolean?".
-Core idea: manager in, QuerySet out; <code>get</code> is strict, <code>filter</code> is forgiving.
-Misconceptions: "saving the class" (only instances save), "<code>filter</code> failed because it printed empty" (empty is valid), "migration edits data" (it edits structure).
-Exit ticket: write one <code>get</code> and one <code>filter</code> for a task named "Demo"; predict the return type of each.
-Support: give the exact import line. Standard: guided queries above. Extension: chain <code>filter(priority="HIGH").exclude(done=True).order_by("name")</code> and explain the SQL-free reading.
-Troubleshooting: no-table error → <code>migrate</code>; shell import error → check venv + <code>cd tasks</code> project root; stale rows confuse counts → <code>Task.objects.all().values_list("name", flat=True)</code> to see reality.</p>
-</div>
 
 
 

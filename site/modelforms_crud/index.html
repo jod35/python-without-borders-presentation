@@ -1117,10 +1117,6 @@
 
 
 <h1 id="modelforms-create-update-delete">ModelForms: Create, Update, Delete<a class="headerlink" href="#modelforms-create-update-delete" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Trainer snapshot</p>
-<p>Duration: 90 min. Prerequisites: Ch5 method rules. Files: <code>tasks/tasks/forms.py</code>, <code>tasks/tasks/views.py</code>, <code>tasks/tasks/urls.py</code>, <code>tasks/templates/task_form.html</code>, <code>tasks/templates/task_confirm_delete.html</code>. Prepare: logged-out + logged-in browsers side by side (protection lands in Ch7, but views already require login). Start: read-only CRUD. End: full POST cycle verified.</p>
-</div>
 <h2 id="what-we-are-learning">What we are learning<a class="headerlink" href="#what-we-are-learning" title="Permanent link">&para;</a></h2>
 <ol>
 <li>What a ModelForm is versus a plain HTML form.</li>
@@ -1229,16 +1225,6 @@
 <p>Define fields once, render with CSRF, validate, save, redirect. Deletes confirm on GET and act on POST.</p>
 <h2 id="next-lesson">Next lesson<a class="headerlink" href="#next-lesson" title="Permanent link">&para;</a></h2>
 <p>We add accounts so only logged-in users reach these write views.</p>
-<div class="admonition note">
-<p class="admonition-title">Trainer guide</p>
-<p>Timed plan (adds to 90): form class 15, views 25, templates+delete 20, guided cycle 15, review + exit 15.
-Live-coding order: <code>forms.py</code> → blank GET → valid POST → redirect → invalid POST (errors) → update with instance → delete GET (no delete) → delete POST (gone). Pause on the invalid submit and ask "save or re-render?".
-Core idea: GET shows, POST decides, valid redirects.
-Misconceptions: errors mean crash (re-render is correct), redirect is optional (prevents duplicates), GET link can delete (never).
-Exit ticket: which HTTP method must delete on, and where is the token?
-Support: keep the three-step mantra visible. Extension: order <code>fields</code> differently, add widgets.
-Troubleshooting: 403 → token; silent non-save → <code>is_valid</code> gate; anonymous redirect → login (Ch7); wrong row edited → check <code>pk</code> in URL.</p>
-</div>
 
 
 

@@ -1,8 +1,5 @@
 # The Django Admin
 
-!!! note "Trainer snapshot"
-    Duration: 60 min. Prerequisites: Ch1 migration applied. Files: `tasks/tasks/admin.py`. Prepare: superuser credentials, `/admin/` open. Start: model unregistered. End: `TaskAdmin` with list/filter/search working.
-
 ## What we are learning
 
 1. What the admin site is for.
@@ -89,12 +86,3 @@ Admin is for staff, not visitors. Register once, customize the list page, and us
 ## Next lesson
 
 We query this same data inside views and show it in templates.
-
-!!! note "Trainer guide"
-    Timed plan (adds to 60): recap 5, superuser 10, live register 15, guided use 15, review + exit 15.
-    Live-coding order: show empty admin → open `admin.py` → write import + decorator + class → refresh → add row → filter → search → edit. Ask "staff tool or visitor page?" at each step.
-    Core idea: register to reveal; customize to navigate.
-    Misconceptions: admin is the website (it is staff-only), registration changes the database (it only changes browsing).
-    Exit ticket: which attribute adds the search box?
-    Support: pre-create the superuser and share credentials. Extension: add `date_hierarchy = "created_at"`.
-    Troubleshooting: missing model → check file saved + server reloaded; login loop → check `AUTH` apps present; password error → lengthen it.

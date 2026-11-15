@@ -1117,10 +1117,6 @@
 
 
 <h1 id="the-django-admin">The Django Admin<a class="headerlink" href="#the-django-admin" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Trainer snapshot</p>
-<p>Duration: 60 min. Prerequisites: Ch1 migration applied. Files: <code>tasks/tasks/admin.py</code>. Prepare: superuser credentials, <code>/admin/</code> open. Start: model unregistered. End: <code>TaskAdmin</code> with list/filter/search working.</p>
-</div>
 <h2 id="what-we-are-learning">What we are learning<a class="headerlink" href="#what-we-are-learning" title="Permanent link">&para;</a></h2>
 <ol>
 <li>What the admin site is for.</li>
@@ -1180,16 +1176,6 @@
 <p>Admin is for staff, not visitors. Register once, customize the list page, and use it to verify data through the rest of the course.</p>
 <h2 id="next-lesson">Next lesson<a class="headerlink" href="#next-lesson" title="Permanent link">&para;</a></h2>
 <p>We query this same data inside views and show it in templates.</p>
-<div class="admonition note">
-<p class="admonition-title">Trainer guide</p>
-<p>Timed plan (adds to 60): recap 5, superuser 10, live register 15, guided use 15, review + exit 15.
-Live-coding order: show empty admin → open <code>admin.py</code> → write import + decorator + class → refresh → add row → filter → search → edit. Ask "staff tool or visitor page?" at each step.
-Core idea: register to reveal; customize to navigate.
-Misconceptions: admin is the website (it is staff-only), registration changes the database (it only changes browsing).
-Exit ticket: which attribute adds the search box?
-Support: pre-create the superuser and share credentials. Extension: add <code>date_hierarchy = "created_at"</code>.
-Troubleshooting: missing model → check file saved + server reloaded; login loop → check <code>AUTH</code> apps present; password error → lengthen it.</p>
-</div>
 
 
 

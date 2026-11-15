@@ -1117,10 +1117,6 @@
 
 
 <h1 id="html-forms-and-http-methods">HTML Forms and HTTP Methods<a class="headerlink" href="#html-forms-and-http-methods" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Trainer snapshot</p>
-<p>Duration: 60 min. Prerequisites: Ch3 list view. Files: <code>tasks/tasks/views.py</code> (search lines). Prepare: rows with distinct names for search demo. Start: plain list. End: safe GET filter understood, POST/CSRF rules stated.</p>
-</div>
 <h2 id="what-we-are-learning">What we are learning<a class="headerlink" href="#what-we-are-learning" title="Permanent link">&para;</a></h2>
 <ol>
 <li>How the request/response cycle works.</li>
@@ -1179,16 +1175,6 @@
 <p>GET reads and is safe to repeat. POST writes and needs CSRF. Validation errors belong back in the form.</p>
 <h2 id="next-lesson">Next lesson<a class="headerlink" href="#next-lesson" title="Permanent link">&para;</a></h2>
 <p>We build ModelForms that create, update, and delete tasks through POST.</p>
-<div class="admonition note">
-<p class="admonition-title">Trainer guide</p>
-<p>Timed plan (adds to 60): cycle 10, GET live 20, POST rules 15, guided 5, review + exit 10.
-Live-coding order: submit search → show <code>?q=</code> URL → read <code>request.GET</code> line → clear box → show unfiltered → state POST rules on board without coding them. Ask "did anything change in the admin?" after each search.
-Core idea: safe methods read, unsafe methods write with a token.
-Misconceptions: CSRF needed for GET (only POST), POST data in URL (only GET), validation is optional (re-render with errors is required).
-Exit ticket: is "delete this task" a GET or POST, and why?
-Support: keep the cycle diagram visible. Extension: add <code>?done=1</code> filter.
-Troubleshooting: 403 → token; lost search term → echo <code>{{ query }}</code>; everything matches → <code>icontains</code> + empty default.</p>
-</div>
 
 
 

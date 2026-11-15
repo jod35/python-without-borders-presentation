@@ -1,7 +1,5 @@
 # Queries in Views
 
-!!! note "Trainer snapshot"
-    Duration: 90 min. Prerequisites: Ch1–Ch2, rows exist. Files: `tasks/tasks/views.py`, `tasks/tasks/urls.py`, `tasks/templates/index.html`, `tasks/templates/detail.html`. Prepare: two tasks in DB, one bad pk to demo 404. Start: dummy-list `index`. End: ORM list + detail with 404 and empty state.
 
 ## What we are learning
 
@@ -146,11 +144,3 @@ Pattern runs view, view queries and passes context, template loops and links. Mi
 
 We share page structure and styling with a base template and static CSS.
 
-!!! note "Trainer guide"
-    Timed plan (adds to 90): dummy recap 10, list view 20, URLs 10, templates 20, guided browsing 15, review + exit 15.
-    Live-coding order: show dummy list → delete it → write ORM `index` → reload → add route → 404 demo with bad pk → write templates → empty-state demo (delete rows, reload, re-add). Ask "where does data come from now?" after each reload.
-    Core idea: view decides what, template decides how it looks.
-    Misconceptions: template queries the DB (view does), 404 is a bug (it is correct for missing rows), route name equals address (name is for reversing).
-    Exit ticket: what renders when the table is empty, and which tag produces it?
-    Support: keep admin open to prove data vs display bugs. Extension: filter done-only tasks in the view.
-    Troubleshooting: NoReverseMatch → names; blank page → context key mismatch; stale dummy fields → model has no `due_date`.

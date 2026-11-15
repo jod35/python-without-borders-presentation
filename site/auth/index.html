@@ -1139,10 +1139,6 @@
 
 
 <h1 id="authentication-login-logout-signup">Authentication: Login, Logout, Signup<a class="headerlink" href="#authentication-login-logout-signup" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Trainer snapshot</p>
-<p>Duration: 90 min. Prerequisites: Ch6 write views. Files: <code>tasks/mysite/urls.py</code>, <code>tasks/mysite/settings.py</code>, <code>tasks/tasks/auth_views.py</code>, <code>tasks/templates/registration/login.html</code>, <code>tasks/templates/registration/signup.html</code>, <code>tasks/templates/base.html</code>. Prepare: one learner account + anonymous window. Start: write views exist with unexplained <code>@login_required</code>. End: signup/login/logout + protected writes verified.</p>
-</div>
 <h2 id="what-we-are-learning">What we are learning<a class="headerlink" href="#what-we-are-learning" title="Permanent link">&para;</a></h2>
 <ol>
 <li>How Django's built-in authentication works.</li>
@@ -1226,16 +1222,6 @@
 <p>Built-in auth for identity, decorator for protection, template check for display, honesty about limits: login alone is not ownership.</p>
 <h2 id="next-lesson">Next lesson<a class="headerlink" href="#next-lesson" title="Permanent link">&para;</a></h2>
 <p>We trace the whole flow and take the final assessment.</p>
-<div class="admonition note">
-<p class="admonition-title">Trainer guide</p>
-<p>Timed plan (adds to 90): routes 20, signup 15, templates+settings 15, protect/state 15, guided 10, review + exit 15.
-Live-coding order: anonymous create → redirect → signup → login → create → logout POST → nav flip → GET-logout 405 → hide-link vs decorator demo (hide link, curl/visit URL directly, still blocked). Ask "who are you vs what may you do?" throughout.
-Core idea: decorator protects, template only displays.
-Misconceptions: hidden button equals safe (no), login equals ownership (no), homemade password storage acceptable (never).
-Exit ticket: which single line protects a view, and what must logout use?
-Support: pre-made accounts. Extension: <code>LOGIN_REDIRECT_URL</code> to detail page.
-Troubleshooting: 405 → POST; loop → settings names; weak password → read errors; still-editable-by-all → expected, documented limit.</p>
-</div>
 
 
 

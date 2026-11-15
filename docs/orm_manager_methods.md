@@ -1,8 +1,5 @@
 # Working with Models and Manager Methods
 
-!!! note "Trainer snapshot"
-    Duration: 90 min. Prerequisites: database models chapter, migrated project. Files: `tasks/tasks/models.py`, `tasks/tasks/migrations/0001_initial.py`. Prepare: clean `db.sqlite3` backup, shell commands copied. Start checkpoint: `Task` model exists, no `0001_initial.py`. End checkpoint: migration applied, `__str__` + ordering added, shell CRUD verified.
-
 ## What we are learning
 
 1. The difference between a model class and a model instance.
@@ -143,11 +140,3 @@ Model class is the recipe, instance is one row, manager takes requests, QuerySet
 
 We register `Task` in the admin so we can inspect these same rows in the browser.
 
-!!! note "Trainer guide"
-    Timed plan (adds to 90): recap/checkpoint 15, class-vs-instance 10, live-coding managers 25, get-vs-filter 10, update/delete 10, guided practice 10, review + exit ticket 10.
-    Live-coding order: `check` → `makemigrations` (show the new file) → `migrate` → `shell` → create → all/filter/exclude/order/count → get vs filter + both exceptions → update → delete. Pause after each return value and ask "what type is this: instance, QuerySet, or boolean?".
-    Core idea: manager in, QuerySet out; `get` is strict, `filter` is forgiving.
-    Misconceptions: "saving the class" (only instances save), "`filter` failed because it printed empty" (empty is valid), "migration edits data" (it edits structure).
-    Exit ticket: write one `get` and one `filter` for a task named "Demo"; predict the return type of each.
-    Support: give the exact import line. Standard: guided queries above. Extension: chain `filter(priority="HIGH").exclude(done=True).order_by("name")` and explain the SQL-free reading.
-    Troubleshooting: no-table error → `migrate`; shell import error → check venv + `cd tasks` project root; stale rows confuse counts → `Task.objects.all().values_list("name", flat=True)` to see reality.

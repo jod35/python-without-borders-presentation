@@ -1,7 +1,5 @@
 # Authentication: Login, Logout, Signup
 
-!!! note "Trainer snapshot"
-    Duration: 90 min. Prerequisites: Ch6 write views. Files: `tasks/mysite/urls.py`, `tasks/mysite/settings.py`, `tasks/tasks/auth_views.py`, `tasks/templates/registration/login.html`, `tasks/templates/registration/signup.html`, `tasks/templates/base.html`. Prepare: one learner account + anonymous window. Start: write views exist with unexplained `@login_required`. End: signup/login/logout + protected writes verified.
 
 ## What we are learning
 
@@ -119,11 +117,3 @@ Built-in auth for identity, decorator for protection, template check for display
 
 We trace the whole flow and take the final assessment.
 
-!!! note "Trainer guide"
-    Timed plan (adds to 90): routes 20, signup 15, templates+settings 15, protect/state 15, guided 10, review + exit 15.
-    Live-coding order: anonymous create → redirect → signup → login → create → logout POST → nav flip → GET-logout 405 → hide-link vs decorator demo (hide link, curl/visit URL directly, still blocked). Ask "who are you vs what may you do?" throughout.
-    Core idea: decorator protects, template only displays.
-    Misconceptions: hidden button equals safe (no), login equals ownership (no), homemade password storage acceptable (never).
-    Exit ticket: which single line protects a view, and what must logout use?
-    Support: pre-made accounts. Extension: `LOGIN_REDIRECT_URL` to detail page.
-    Troubleshooting: 405 → POST; loop → settings names; weak password → read errors; still-editable-by-all → expected, documented limit.

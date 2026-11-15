@@ -1,7 +1,5 @@
 # Integration Project and Final Review
 
-!!! note "Trainer snapshot"
-    Duration: 60 min + 90 min final assessment. Prerequisites: Ch1–Ch7. Files: whole `tasks/`. Prepare: seeded DB, checklist printed. Start: all features built. End: flow traceable, gaps listed, assessment submitted.
 
 ## What we are learning
 
@@ -37,9 +35,3 @@ Assessments live in `assessments.md`: A1 ORM+admin (45 min), A2 CRUD+ModelForms 
 ## Summary
 
 One project, one flow, honest limits. You can now build, verify, and explain a beginner Django CRUD site with auth.
-
-!!! note "Trainer guide"
-    Timed plan (adds to 60): flow trace 20, guided drill 20, assessment brief 10, exit 10. A3 runs separately (90).
-    Core idea: say each hop before clicking. Misconceptions: template queries (view does), redirect optional (prevents resubmit), login equals ownership (no).
-    Exit ticket: write the hop list for delete. Support: flow diagram on board. Extension: propose an ownership rule (`owner = ForeignKey(User)`) as future work without implementing.
-    Troubleshooting: see `reference/errors.md` symptom index.

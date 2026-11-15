@@ -1,8 +1,5 @@
 # Layouts and Styling
 
-!!! note "Trainer snapshot"
-    Duration: 60 min. Prerequisites: Ch3 list + detail. Files: `tasks/templates/base.html`, `tasks/static/tasks/style.css`. Prepare: unstyled pages open for before/after. Start: two standalone pages. End: shared layout + CSS loading.
-
 ## What we are learning
 
 1. How template inheritance shares page structure.
@@ -144,12 +141,3 @@ One base template plus one small stylesheet gives every page the same nav, layou
 ## Next lesson
 
 We handle user input: HTML forms, GET versus POST, and CSRF.
-
-!!! note "Trainer guide"
-    Timed plan (adds to 60): base 20, CSS 15, children 10, guided 5, review + exit 10.
-    Live-coding order: show duplicated headers → create `base.html` → convert one page → convert second → add CSS → 200 check → resize demo. Ask "how many files must change to edit the nav?" before and after.
-    Core idea: skeleton once, fill holes per page.
-    Misconceptions: CSS edits need migrate (no), blocks replace whole file (only named holes), static works without the app path (needs `tasks/` prefix).
-    Exit ticket: which tag loads CSS URLs and which line enables it?
-    Support: give the exact static path. Extension: add an `extra_css` block.
-    Troubleshooting: 404 CSS → path; stale style → hard refresh; reverse errors → Ch6/Ch7 pending, note and continue.

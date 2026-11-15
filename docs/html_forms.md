@@ -1,8 +1,5 @@
 # HTML Forms and HTTP Methods
 
-!!! note "Trainer snapshot"
-    Duration: 60 min. Prerequisites: Ch3 list view. Files: `tasks/tasks/views.py` (search lines). Prepare: rows with distinct names for search demo. Start: plain list. End: safe GET filter understood, POST/CSRF rules stated.
-
 ## What we are learning
 
 1. How the request/response cycle works.
@@ -89,11 +86,3 @@ GET reads and is safe to repeat. POST writes and needs CSRF. Validation errors b
 
 We build ModelForms that create, update, and delete tasks through POST.
 
-!!! note "Trainer guide"
-    Timed plan (adds to 60): cycle 10, GET live 20, POST rules 15, guided 5, review + exit 10.
-    Live-coding order: submit search → show `?q=` URL → read `request.GET` line → clear box → show unfiltered → state POST rules on board without coding them. Ask "did anything change in the admin?" after each search.
-    Core idea: safe methods read, unsafe methods write with a token.
-    Misconceptions: CSRF needed for GET (only POST), POST data in URL (only GET), validation is optional (re-render with errors is required).
-    Exit ticket: is "delete this task" a GET or POST, and why?
-    Support: keep the cycle diagram visible. Extension: add `?done=1` filter.
-    Troubleshooting: 403 → token; lost search term → echo `{{ query }}`; everything matches → `icontains` + empty default.

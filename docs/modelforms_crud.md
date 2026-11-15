@@ -1,8 +1,5 @@
 # ModelForms: Create, Update, Delete
 
-!!! note "Trainer snapshot"
-    Duration: 90 min. Prerequisites: Ch5 method rules. Files: `tasks/tasks/forms.py`, `tasks/tasks/views.py`, `tasks/tasks/urls.py`, `tasks/templates/task_form.html`, `tasks/templates/task_confirm_delete.html`. Prepare: logged-out + logged-in browsers side by side (protection lands in Ch7, but views already require login). Start: read-only CRUD. End: full POST cycle verified.
-
 ## What we are learning
 
 1. What a ModelForm is versus a plain HTML form.
@@ -148,11 +145,3 @@ Define fields once, render with CSRF, validate, save, redirect. Deletes confirm 
 
 We add accounts so only logged-in users reach these write views.
 
-!!! note "Trainer guide"
-    Timed plan (adds to 90): form class 15, views 25, templates+delete 20, guided cycle 15, review + exit 15.
-    Live-coding order: `forms.py` → blank GET → valid POST → redirect → invalid POST (errors) → update with instance → delete GET (no delete) → delete POST (gone). Pause on the invalid submit and ask "save or re-render?".
-    Core idea: GET shows, POST decides, valid redirects.
-    Misconceptions: errors mean crash (re-render is correct), redirect is optional (prevents duplicates), GET link can delete (never).
-    Exit ticket: which HTTP method must delete on, and where is the token?
-    Support: keep the three-step mantra visible. Extension: order `fields` differently, add widgets.
-    Troubleshooting: 403 → token; silent non-save → `is_valid` gate; anonymous redirect → login (Ch7); wrong row edited → check `pk` in URL.
